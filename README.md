@@ -1,5 +1,7 @@
 # Spotify Nextjs clone
 
+![Spotify Logo](./public/spotify.png 'Spotify')
+
 Spotify clone made using Nextjs.
 
 This repository was made using code from FrontendMasters course called [Learn to Build a Full-Stack Music App from Scratch with React & Nextjs](https://frontendmasters.com/courses/fullstack-app-next/).
