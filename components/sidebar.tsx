@@ -59,7 +59,7 @@ const Sidebar = () => {
       paddingX="1rem"
       color="gray"
     >
-      <Box paddingY="20px">
+      <Box paddingY="20px" height="100%">
         <Box width="120px" marginBottom="20px">
           <NextImage src="/spotify.png" height={80} width={80} />
         </Box>
@@ -85,8 +85,7 @@ const Sidebar = () => {
             })}
           </List>
         </Box>
-        <Divider color="gray.700" />
-        <Box marginTop="20px">
+        <Box marginY="20px">
           <List spacing={2}>
             {musicMenu.map((item) => {
               return (
@@ -107,6 +106,12 @@ const Sidebar = () => {
               );
             })}
           </List>
+        </Box>
+        <Divider color="gray.700" />
+        <Box height="56%" overflowY="auto" paddingY="20px">
+          {new Array(50).fill(1).map(() => {
+            return <h1>ABC</h1>;
+          })}
         </Box>
       </Box>
     </Box>
