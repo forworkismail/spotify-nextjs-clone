@@ -18,3 +18,21 @@ model User {
   email     String   @unique
   password  String
 }
+
+model Song {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+  title     String
+  Artist    Artist?  @relation(fields: [artistId], references: [id])
+  artistId  Int?
+}
+
+model Artist {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+  name      String   @unique
+
+  songs Song[]
+}
