@@ -37,6 +37,19 @@ const navMenu = [
   }
 ];
 
+const musicMenu = [
+  {
+    name: 'Create Playlist',
+    icon: MdPlaylistAdd,
+    route: '/'
+  },
+  {
+    name: 'Favorites',
+    icon: MdFavorite,
+    route: '/favorites'
+  }
+];
+
 const Sidebar = () => {
   return (
     <Box
@@ -55,6 +68,29 @@ const Sidebar = () => {
             {navMenu.map((item) => {
               return (
                 <ListItem key={item.name} fontSize="16px">
+                  <LinkBox>
+                    <NextLink href={item.route} passHref>
+                      <LinkOverlay>
+                        <ListIcon
+                          as={item.icon}
+                          color="white"
+                          marginRight="20px"
+                        />
+                        {item.name}
+                      </LinkOverlay>
+                    </NextLink>
+                  </LinkBox>
+                </ListItem>
+              );
+            })}
+          </List>
+        </Box>
+        <Divider color="gray.700" />
+        <Box marginTop="20px">
+          <List spacing={2}>
+            {musicMenu.map((item) => {
+              return (
+                <ListItem fontSize="16px" key={item.name}>
                   <LinkBox>
                     <NextLink href={item.route} passHref>
                       <LinkOverlay>
