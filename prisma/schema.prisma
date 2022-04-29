@@ -30,6 +30,7 @@ model Song {
   Playlist   Playlist? @relation(fields: [playlistId], references: [id])
   playlistId Int?
   duration   Int
+  url        String
 }
 
 model Artist {
