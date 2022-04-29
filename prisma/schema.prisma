@@ -36,8 +36,7 @@ model Artist {
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now())
   name      String   @unique
-
-  songs Song[]
+  songs     Song[]
 }
 
 model Playlist {
