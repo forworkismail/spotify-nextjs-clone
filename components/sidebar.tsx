@@ -108,9 +108,9 @@ const Sidebar = () => {
           </List>
         </Box>
         <Divider color="gray.700" />
-        <Box height="56%" overflowY="auto" paddingY="20px">
-          {new Array(50).fill(1).map(() => {
-            return <h1>ABC</h1>;
+        <Box height="50%" overflowY="auto" paddingY="20px">
+          {new Array(50).fill(1).map((index) => {
+            return <h1 key={index}>ABC</h1>;
           })}
         </Box>
       </Box>
