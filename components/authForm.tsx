@@ -21,3 +21,5 @@ const AuthForm: FC<{ mode: string }> = ({ mode }) => {
     </Box>
   );
 };
+
+export default AuthForm;
